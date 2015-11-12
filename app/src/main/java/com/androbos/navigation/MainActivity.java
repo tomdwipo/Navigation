@@ -16,13 +16,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.androbos.navigation.Fragment.FlexibleActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private String[] ttes ={
-            "Sunday","Monday","Tuesday","bfdbsd"
+            "Sunday","Monday","Tuesday","Wednesday","Thursday",
+            "Friday", "Saturday"
     };
     private ListView list;
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity
                       startActivity(intent);
                       break;
                   default:
+                      Toast.makeText(getApplicationContext(),"Tes", Toast.LENGTH_LONG).show();
                       break;
               }
 
